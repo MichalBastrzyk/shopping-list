@@ -1,12 +1,12 @@
 import * as React from "react"
 
-import { type ProductTypeNames } from "@/config"
+import { type UnitNames, type ProductTypeNames } from "@/config"
 
 export interface Item {
   id: number
   name: string
   count: number
-  unit: string
+  unit: UnitNames
   tag: ProductTypeNames
   checked: boolean
 }

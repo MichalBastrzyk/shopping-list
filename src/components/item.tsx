@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons"
 import { Badge } from "@/components/ui/badge"
 
 import { type Item } from "@/hooks/useItems"
-import { productTypes } from "@/config"
+import { productTypes, units } from "@/config"
 
 export interface ItemProps extends Item {
   onCheckedChange?: (state: boolean) => void
@@ -36,7 +36,7 @@ export default function Item({
             {name}
           </span>
           <span className="text-xs text-gray-200">
-            {count} {unit}
+            {count} {units[unit]}
           </span>
         </div>
       </div>

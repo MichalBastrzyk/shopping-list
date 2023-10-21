@@ -29,3 +29,12 @@ export const productTypes = {
 }
 
 export type ProductTypeNames = keyof typeof productTypes
+
+export const units = {
+  pieces: "szt",
+  kg: "kg",
+  g: "g",
+  ml: "ml",
+}
+
+export type UnitNames = keyof typeof units
