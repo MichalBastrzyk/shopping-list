@@ -1,5 +1,11 @@
 # Shopping List App
 
+<div align="center">
+  <img src="docs/screenshot-desktop.png" alt="Desktop Screenshot" style="max-width: 900px;">
+</div>
+
+
+
 ## Overview
 
 The Shopping List App is a beautifully designed web application that allows users to create and manage their shopping lists efficiently. It is built using React, Typescript, TailwindCSS, and radix-ui, combining the power of these technologies to provide I, as the developer, with a user-friendly and visually appealing experience.
@@ -10,19 +16,25 @@ The Shopping List App is a beautifully designed web application that allows user
 
 - **User-Friendly Interface**: The interface is designed to be simple and easy to navigate, making it convenient for users of all levels.
 
-- **Create and Manage Lists**: Users can create multiple shopping lists, add items to them, and check them off when purchased.
-
-- **Real-Time Updates**: The app provides real-time updates, so multiple users can collaborate on a single shopping list, and changes are reflected instantly.
-
-- **Search and Filter**: Easily search for specific items or filter lists by categories for efficient shopping.
-
 - **Responsive Design**: The app is responsive, ensuring a seamless experience on various devices, including mobile phones and tablets.
+
+<div align="center">
+  <img src="docs/screenshot-mobile.png" alt="Desktop Screenshot" style="max-height: 500;">
+</div>
 
 - **Type-safe with Typescript**: The use of Typescript guarantees type safety and helps me, as the developer, catch errors early in the development process.
 
 - **Styling with TailwindCSS**: The app's styling is powered by TailwindCSS, making it highly customizable and visually appealing.
 
 - **Accessible Components**: The app uses radix-ui components to ensure accessibility and improve the user experience for all users.
+
+- **100s in Lighthouse**: Achieves perfect scores in Lighthouse, ensuring top performance, accessibility, and best practices.
+
+
+
+<div align="center">
+  <img src="docs/lighthouse.png" alt="Lighthouse Score" style="max-width: 600px;">
+</div>
 
 ## Getting Started
 
@@ -38,7 +50,7 @@ To get started with the Shopping List App, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to the development of this app, please follow the guidelines in our [Contribution Guide](CONTRIBUTING.md).
+Contributions are welcome! 
 
 ## License
 
