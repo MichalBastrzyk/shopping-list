@@ -16,7 +16,7 @@ export function App() {
   return (
     <>
       <div className="absolute left-0 top-0 -z-10 w-full">
-        <div className="relative left-0 top-0 -z-10 h-auto w-full">
+        <div className="relative left-0 top-0 -z-10 hidden h-auto w-full sm:block">
           <picture>
             <source
               srcSet="/background.webp"

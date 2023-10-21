@@ -1,4 +1,4 @@
-import * as z from "zod"
+import { z } from "zod"
 
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -21,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Badge } from "./ui/badge"
+import { Badge } from "@/components/ui/badge"
 
 const formSchema = z.object({
   name: z

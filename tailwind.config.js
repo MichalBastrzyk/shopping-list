@@ -1,5 +1,3 @@
-import { fontFamily } from "tailwindcss/defaultTheme"
-
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -10,9 +8,6 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    fontFamily: {
-      sans: ["Inter", ...fontFamily.sans],
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -34,7 +29,7 @@ export default {
         500: "#111112",
         600: "#0C0C0D",
       },
-      feeedback: {
+      feedback: {
         DEFAULT: "#2F723D",
         light: "#4E995E",
       },

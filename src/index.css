@@ -4,6 +4,7 @@
 
 @layer base {
   body {
+    font-display: swap;
     @apply bg-gray-600 text-gray-100 selection:bg-brand-dark/25 selection:text-brand-light;
   }
 
