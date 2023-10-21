@@ -42,9 +42,9 @@ To get started with the Shopping List App, follow these steps:
 
 1. Clone the repository to your local machine.
 
-2. Install the necessary dependencies using `npm install`.
+2. Install the necessary dependencies using `bun install`.
 
-3. Run the app locally using `npm start`.
+3. Run the app locally using `bun dev`.
 
 4. Open your web browser and visit `http://localhost:3000` to start using the app.
 
