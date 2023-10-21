@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons"
 
-export const ProductTypes = {
+export const productTypes = {
   bread: {
     name: "pieczywo",
     color: "yellow",
@@ -28,4 +28,4 @@ export const ProductTypes = {
   },
 }
 
-export type ProductTypeName = keyof typeof ProductTypes
+export type ProductTypeNames = keyof typeof productTypes

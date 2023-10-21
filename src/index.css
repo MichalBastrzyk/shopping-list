@@ -4,6 +4,19 @@
 
 @layer base {
   body {
-    @apply bg-gray-600 text-gray-100;
+    @apply bg-gray-600 text-gray-100 selection:bg-brand-dark/25 selection:text-brand-light;
+  }
+
+  /* Hide the default styles for the input type="number" */
+  /* Firefox support */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
