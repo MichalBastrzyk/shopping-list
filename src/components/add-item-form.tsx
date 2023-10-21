@@ -105,8 +105,12 @@ export function AddItemForm({
                 <FormLabel>Jednostka</FormLabel>
                 <FormControl>
                   <Select onValueChange={field.onChange} {...field}>
-                    <SelectTrigger className="min-w-[8rem] rounded-l-none">
+                    <SelectTrigger
+                      className="min-w-[8rem] rounded-l-none"
+                      aria-label="Jednostka"
+                    >
                       <SelectValue placeholder="Jednostka" />
+                      <span className="sr-only">Jednostka</span>
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="g">Gramy</SelectItem>
@@ -129,8 +133,9 @@ export function AddItemForm({
               <FormLabel>Tag</FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} {...field}>
-                  <SelectTrigger className="w-60">
+                  <SelectTrigger className="w-60" aria-label="Kategoria">
                     <SelectValue placeholder="Kategoria" />
+                    <span className="sr-only">Kategoria</span>
                   </SelectTrigger>
                   <SelectContent className="w-60">
                     <SelectItem value="bread">
@@ -170,8 +175,13 @@ export function AddItemForm({
             </FormItem>
           )}
         />
-        <Button type="submit" className="mx-auto group-data-[error=true]:mt-8">
+        <Button
+          type="submit"
+          className="mx-auto group-data-[error=true]:mt-8"
+          aria-label="Dodaj"
+        >
           <Icons.plus className="h-4 w-4" />
+          <span className="sr-only">Dodaj</span>
         </Button>
       </form>
     </Form>

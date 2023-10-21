@@ -15,13 +15,26 @@ export function App() {
     <>
       <div className="absolute left-0 top-0 -z-10 w-full">
         <div className="relative left-0 top-0 -z-10 h-auto w-full">
-          <img src="/background.png" alt="" className="-z-20 h-auto w-full" />
+          <picture>
+            <source srcSet="/background.webp" type="image/webp" />
+            <img
+              src="/background.png"
+              alt=""
+              className="-z-20 h-auto w-full"
+              loading="eager"
+            />
+          </picture>
           <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-gray-300/20 to-gray-600"></div>
         </div>
       </div>
       <main className="container z-10 flex max-h-screen flex-col">
         <div className="flex items-center space-x-2">
-          <img src="/favicon.ico" alt="Ikona" className="mt-6 h-8 w-8" />
+          <img
+            src="/favicon.ico"
+            alt="Ikona"
+            className="mt-6 h-8 w-8"
+            loading="lazy"
+          />
           <h1 className="mb-9 mt-16 text-2xl font-bold">Lista Zakupów</h1>
         </div>
         <AddItemForm onSubmit={addItem} />
