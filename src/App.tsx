@@ -1,8 +1,10 @@
-import { useAutoAnimate } from "@formkit/auto-animate/react"
+import * as React from "react"
 
-import { Item } from "@/components/item"
+import { useAutoAnimate } from "@formkit/auto-animate/react"
 import { useItems } from "@/hooks/useItems"
-import { AddItemForm } from "@/components/add-item-form"
+
+const Item = React.lazy(() => import("@/components/item"))
+const AddItemForm = React.lazy(() => import("@/components/add-item-form"))
 
 export function App() {
   const [autoAnimate] = useAutoAnimate()
@@ -16,9 +18,16 @@ export function App() {
       <div className="absolute left-0 top-0 -z-10 w-full">
         <div className="relative left-0 top-0 -z-10 h-auto w-full">
           <picture>
-            <source srcSet="/background.webp" type="image/webp" />
+            <source
+              srcSet="/background.webp"
+              type="image/webp"
+              width={1440}
+              height={185}
+            />
             <img
               src="/background.png"
+              width={1440}
+              height={185}
               alt=""
               className="-z-20 h-auto w-full"
               loading="eager"
@@ -37,22 +46,36 @@ export function App() {
           />
           <h1 className="mb-9 mt-16 text-2xl font-bold">Lista Zakupów</h1>
         </div>
-        <AddItemForm onSubmit={addItem} />
-        <ul
-          className="mt-10 flex flex-col space-y-2 lg:space-y-3"
-          ref={autoAnimate}
-        >
-          {uncheckedItems.map((item) => (
-            <li key={item.id}>
-              <Item {...item} onCheckedChange={() => toggleCheck(item.id)} />
-            </li>
-          ))}
-          {checkedItems.map((item) => (
-            <li key={item.id}>
-              <Item {...item} onCheckedChange={() => toggleCheck(item.id)} />
-            </li>
-          ))}
-        </ul>
+        <React.Suspense>
+          <AddItemForm onSubmit={addItem} />
+        </React.Suspense>
+        {items.length !== 0 ? (
+          <ul
+            className="mt-10 flex flex-col space-y-2 lg:space-y-3"
+            ref={autoAnimate}
+          >
+            {uncheckedItems.map((item) => (
+              <li key={item.id}>
+                <React.Suspense>
+                  <Item
+                    {...item}
+                    onCheckedChange={() => toggleCheck(item.id)}
+                  />
+                </React.Suspense>
+              </li>
+            ))}
+            {checkedItems.map((item) => (
+              <li key={item.id}>
+                <React.Suspense>
+                  <Item
+                    {...item}
+                    onCheckedChange={() => toggleCheck(item.id)}
+                  />
+                </React.Suspense>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </main>
     </>
   )

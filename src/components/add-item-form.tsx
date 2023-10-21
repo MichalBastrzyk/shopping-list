@@ -42,7 +42,7 @@ const formSchema = z.object({
   }),
 })
 
-export function AddItemForm({
+export default function AddItemForm({
   onSubmit,
 }: {
   onSubmit: (values: z.infer<typeof formSchema>) => void

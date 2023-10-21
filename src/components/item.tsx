@@ -9,7 +9,7 @@ export interface ItemProps extends Item {
   onCheckedChange?: (state: boolean) => void
 }
 
-export function Item({
+export default function Item({
   name,
   count,
   unit,
