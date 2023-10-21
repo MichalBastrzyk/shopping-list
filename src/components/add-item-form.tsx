@@ -62,7 +62,7 @@ export function AddItemForm({
   return (
     <Form {...form}>
       <form
-        className="group flex w-full items-end justify-center space-x-3 data-[error=true]:items-start"
+        className="group flex w-full flex-wrap items-end justify-start space-y-3 data-[error=true]:items-start sm:space-x-3"
         onSubmit={form.handleSubmit(onSubmit)}
         data-error={hasErrors}
       >
@@ -73,7 +73,7 @@ export function AddItemForm({
             <FormItem className="flex-1">
               <FormLabel>Nazwa</FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input className="min-w-[10rem]" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -170,7 +170,7 @@ export function AddItemForm({
             </FormItem>
           )}
         />
-        <Button type="submit" className="group-data-[error=true]:mt-8">
+        <Button type="submit" className="mx-auto group-data-[error=true]:mt-8">
           <Icons.plus className="h-4 w-4" />
         </Button>
       </form>
