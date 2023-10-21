@@ -20,7 +20,10 @@ export function App() {
         </div>
       </div>
       <main className="container z-10 flex max-h-screen flex-col">
-        <h1 className="mb-9 mt-16 text-2xl font-bold">Lista Zakupów</h1>
+        <div className="flex items-center space-x-2">
+          <img src="/favicon.ico" alt="Ikona" className="mt-6 h-8 w-8" />
+          <h1 className="mb-9 mt-16 text-2xl font-bold">Lista Zakupów</h1>
+        </div>
         <AddItemForm onSubmit={addItem} />
         <ul
           className="mt-10 flex flex-col space-y-2 lg:space-y-3"
